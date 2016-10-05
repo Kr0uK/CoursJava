@@ -6,9 +6,9 @@ public interface IFraction {
 	
 	
 	Fraction additionner(Fraction f) throws FractionDenEqualsZeroException;	
-	Fraction soustraire(Fraction f);
-	Fraction multiplier(Fraction f);
-	Fraction diviser(Fraction f);
+	Fraction soustraire(Fraction f) throws FractionDenEqualsZeroException;
+	Fraction multiplier(Fraction f) throws FractionDenEqualsZeroException;
+	Fraction diviser(Fraction f) throws FractionDenEqualsZeroException;
 	
 	Fraction opposer();
 	Fraction inverser();

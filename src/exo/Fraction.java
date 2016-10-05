@@ -34,45 +34,50 @@ public class Fraction implements IFraction {
 
     @Override
     public Fraction additionner(Fraction f) throws FractionDenEqualsZeroException {
-
-
         int d = this.den * f.den;
         int n = (this.num * f.den) + (this.den * f.num);
-
-        //exo.Fraction ff = new exo.Fraction(n ,d );
-
         return new Fraction(n, d);
-
     }
 
 
     @Override
-    public Fraction soustraire(Fraction f) {
-        return null;
+    public Fraction soustraire(Fraction f) throws FractionDenEqualsZeroException {
+        int d = this.den * f.den;
+        int n = (this.num * f.den) - (this.den * f.num);
+        return new Fraction(n,d);
     }
 
     @Override
-    public Fraction multiplier(Fraction f) {
+    public Fraction multiplier(Fraction f) throws FractionDenEqualsZeroException {
+        int n = this.getNum() * f.getNum();
+        int d = this.getDen() * f.getDen();
 
-        return null;
+        return new Fraction(n,d);
     }
 
     @Override
-    public Fraction diviser(Fraction f) {
+    public Fraction diviser(Fraction f) throws FractionDenEqualsZeroException {
+        int n = this.getNum() * f.getDen();
+        int d = this.getDen() * f.getNum();
 
-        return null;
+        return new Fraction(n,d);
     }
 
     @Override
     public Fraction opposer() {
 
-        return null;
+
+        return this;
     }
 
     @Override
     public Fraction inverser() {
 
-        return null;
+        int temp = this.getNum();
+        this.setNum(this.getDen());
+        this.setDen(temp);
+
+        return this;
     }
 
     @Override
@@ -86,10 +91,6 @@ public class Fraction implements IFraction {
         int diviseur = pgcd(this.num, this.den);
         this.num = num/diviseur;
         this.den =  den/diviseur;
-
-
-
-
         return  this;
     }
 
