@@ -3,12 +3,13 @@ package exo;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Principal {
 
 	public static void main(String[] args) throws FractionDenEqualsZeroException {
-
+		 //DecimalFormat decimalPrintFormat = new DecimalFormat("#,##0.0###");
 		
 		Scanner sc  = new Scanner(System.in);
 
@@ -16,11 +17,9 @@ public class Principal {
 		
 		
 		try {
-			Fraction f2 = new Fraction(1,4);
-			Fraction f3 = new Fraction(1,2);
-
-
-			System.out.println("Kappa " + f2.comparer(f3));
+			Fraction f2 = new Fraction(1,2);
+			Fraction f3 = new Fraction(2,4);
+			System.out.println("Kappa " +f2.comparer(f3));
 		} catch (FractionDenEqualsZeroException e1) {
 			e1.printStackTrace();
 		}

@@ -66,7 +66,6 @@ public class Fraction implements IFraction {
     @Override
     public Fraction opposer() {
         this.setNum(this.getNum() * -1);
-        this.setDen(this.getDen() * -1);
         return this;
     }
 
@@ -147,13 +146,11 @@ public class Fraction implements IFraction {
         System.out.println(this.num + " / " + this.den);
     }
 
-    public int pgcd(int n, int d) {
+    public static int pgcd(int n, int d) {
         try {
-
             if (n % d == 0)
                 return d;
             else
-
                 return pgcd(n, n % d); // Le machin à foutre dans la division
 
         } catch (StackOverflowError e) {
