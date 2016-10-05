@@ -83,11 +83,14 @@ public class Fraction implements IFraction {
 
     @Override
     public Fraction simplifier() throws FractionDenEqualsZeroException {
-        Fraction fracSimp = new Fraction(1, 1);
+        int diviseur = pgcd(this.num, this.den);
+        this.num = num/diviseur;
+        this.den =  den/diviseur;
 
 
 
-        return fracSimp;
+
+        return  this;
     }
 
     @Override

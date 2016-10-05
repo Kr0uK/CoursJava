@@ -18,7 +18,8 @@ public class Principal {
 		try {
 			Fraction f2 = new Fraction(8, 16);
 			int kappa = f2.pgcd(f2.getNum(),f2.getDen());
-			System.out.println("Kappa : " + kappa);
+
+			System.out.println("Kappa " + f2.simplifier());
 		} catch (FractionDenEqualsZeroException e1) {
 			e1.printStackTrace();
 		}
