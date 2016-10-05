@@ -65,8 +65,8 @@ public class Fraction implements IFraction {
 
     @Override
     public Fraction opposer() {
-
-
+        this.setNum(this.getNum()*-1);
+        this.setDen(this.getDen()*-1);
         return this;
     }
 
@@ -76,7 +76,6 @@ public class Fraction implements IFraction {
         int temp = this.getNum();
         this.setNum(this.getDen());
         this.setDen(temp);
-
         return this;
     }
 
