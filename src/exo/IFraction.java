@@ -17,7 +17,7 @@ public interface IFraction {
 	Fraction simplifier() throws FractionDenEqualsZeroException;
 	
 	
-	int comparer(Fraction f);  // a + b /// a.plus(b);
+	int comparer(Fraction f) throws FractionDenEqualsZeroException;  // a + b /// a.plus(b);
 	boolean egalite(Fraction f);
 	String afficher();
 	

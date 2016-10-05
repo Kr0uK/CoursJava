@@ -16,10 +16,11 @@ public class Principal {
 		
 		
 		try {
-			Fraction f2 = new Fraction(8, 16);
-			int kappa = f2.pgcd(f2.getNum(),f2.getDen());
+			Fraction f2 = new Fraction(1,4);
+			Fraction f3 = new Fraction(1,2);
 
-			System.out.println("Kappa " + f2.simplifier());
+
+			System.out.println("Kappa " + f2.comparer(f3));
 		} catch (FractionDenEqualsZeroException e1) {
 			e1.printStackTrace();
 		}
