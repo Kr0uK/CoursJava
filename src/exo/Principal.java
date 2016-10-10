@@ -1,5 +1,6 @@
 package exo;
 
+import java.awt.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -13,11 +14,11 @@ public class Principal {
 
     public enum ListeCouleurs {
         BLEUFONCE(1, "Bleu", "foncé","20447D"),
-        NOIR(2,"noir", "","000000"),
-        BLANC(3, "blanc", "","FFFFFF"),
-        GRISFONCE(4, "gris", "foncé","555555"),
-        BLEUCLAIR(5, "bleu", "clair","00FFFF"),
-        BLEU(6, "bleu", "","0000FF");
+        NOIR(2,"Noir", "Noir","000000"),
+        BLANC(3, "Blanc", "Blanc","FFFFFF"),
+        GRISFONCE(4, "Gris", "foncé","555555"),
+        BLEUCLAIR(5, "Bleu", "clair","00FFFF"),
+        BLEU(6, "Bleu", "Bleu","0000FF");
 
         public int getId() {
             return id;
