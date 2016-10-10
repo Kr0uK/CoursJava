@@ -12,12 +12,12 @@ import java.util.Scanner;
 public class Principal {
 
     public enum ListeCouleurs {
-        BLEUFONCE(1, "Bleu", "foncé"),
-        NOIR(2,"noir", ""),
-        BLANC(3, "blanc", ""),
-        GRISFONCE(4, "gris", "foncé"),
-        BLEUCLAIR(5, "bleu", "clair"),
-        BLEU(6, "bleu", "");
+        BLEUFONCE(1, "Bleu", "foncé","20447D"),
+        NOIR(2,"noir", "","000000"),
+        BLANC(3, "blanc", "","FFFFFF"),
+        GRISFONCE(4, "gris", "foncé","555555"),
+        BLEUCLAIR(5, "bleu", "clair","00FFFF"),
+        BLEU(6, "bleu", "","0000FF");
 
         public int getId() {
             return id;
@@ -31,15 +31,21 @@ public class Principal {
             return nuance;
         }
 
-        ListeCouleurs(int id, String couleur, String nuance) {
+        public String getHexcode() {
+            return hexcode;
+        }
+
+        ListeCouleurs(int id, String couleur, String nuance, String hexcode) {
             this.id = id;
             this.couleur = couleur;
             this.nuance = nuance;
+            this.hexcode = hexcode;
         }
 
         int id;
         String couleur;
         String nuance;
+        String hexcode;
     }
 
     public static void main(String[] args)
@@ -51,6 +57,10 @@ public class Principal {
 
         CouleurCompare comp = new CouleurCompare();
         Collections.sort(ListCouleurs,comp);
+
+
+        // Résultat : bleu clair, noir, blanc,  gris foncé, bleu foncé
+        System.out.println(ListCouleurs);
 
 
 
