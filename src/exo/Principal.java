@@ -12,7 +12,7 @@ public class Principal {
 
     public enum ListeCouleurs {
         BLEUFONCE(1, "Bleu", "foncé"),
-        NOIR(2, , "noir", ""),
+        NOIR(2,"noir", ""),
         BLANC(3, "blanc", ""),
         GRISFONCE(4, "gris", "foncé"),
         BLEUCLAIR(5, "bleu", "clair"),
@@ -43,12 +43,14 @@ public class Principal {
 
     public static void main(String[] args)
     {
+
        List<ListeCouleurs> ListCouleurs = new ArrayList<>();
+
         for (ListeCouleurs couleur: ListeCouleurs.values()) {
-            
+            ListCouleurs.add(couleur);
+           // System.out.println(couleur);
         }
 
-        //ListeCouleurs.add();
 
 
     }
