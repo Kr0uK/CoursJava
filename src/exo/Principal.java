@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -46,10 +47,7 @@ public class Principal {
 
        List<ListeCouleurs> ListCouleurs = new ArrayList<>();
 
-        for (ListeCouleurs couleur: ListeCouleurs.values()) {
-            ListCouleurs.add(couleur);
-           // System.out.println(couleur);
-        }
+        Collections.addAll(ListCouleurs, ListeCouleurs.values());
 
 
 
