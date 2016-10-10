@@ -46,8 +46,15 @@ public class Principal {
     {
 
        List<ListeCouleurs> ListCouleurs = new ArrayList<>();
-
         Collections.addAll(ListCouleurs, ListeCouleurs.values());
+
+
+        CouleurCompare comp = new CouleurCompare();
+        Collections.sort(ListCouleurs,comp);
+
+
+
+
 
 
 
