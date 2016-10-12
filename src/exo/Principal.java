@@ -12,6 +12,8 @@ import java.util.Scanner;
 
 public class Principal {
 
+
+    int n = 0;
     public enum ListeCouleurs {
         BLEUFONCE(1, "Bleu", "foncé","20447D"),
         NOIR(2,"Noir", "Noir","000000"),
